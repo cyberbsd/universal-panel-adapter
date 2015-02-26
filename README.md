@@ -69,10 +69,9 @@ For compiling the following Arduino libraries are needed
 For Viki and I2C based panels
 * LiquidTWI2 from https://github.com/lincomatic/LiquidTWI2
 
-For Parallel panels
+For Parallel panels or ReprapDiscountSmart Controller panels
 * LiquidCrystalFast from https://www.pjrc.com/teensy/td_libs_LiquidCrystal.html
 
-For ReprapDiscountSmart Controller panels
-* LiquidCrystal from https://www.pjrc.com/teensy/td_libs_LiquidCrystal.html
+
 
 
