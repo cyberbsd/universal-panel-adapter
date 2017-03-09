@@ -21,6 +21,7 @@ SS   -> D10
 //#define VIKI 1
 #define PARALLEL 1
 #define RRD 1  //Reprap Discount Smart Controller support
+#define ATOM2 1  //ATOM2.0 LCD Reprap Discount Smart Controller support
 
 #ifdef VIKI
 #include "LiquidTWI2.h"
@@ -31,6 +32,7 @@ LiquidTWI2 lcd(0); // uses pins SDA -> A4, SCL -> A5
 
 #elif defined(PARALLEL)
 #include "LiquidCrystalFast.h"
+//#include <LiquidCrystal.h>
 // parallel LCD Pins
 // LCD pins: RS  RW  EN  D4 D5 D6 D7
 #define LCD_RS  9 // D9
@@ -41,16 +43,30 @@ LiquidTWI2 lcd(0); // uses pins SDA -> A4, SCL -> A5
 #define LCD_D6  7 // D7
 #define LCD_D7  8 // D8
 
+#if defined(ATOM2)
+#define LCD_D0  0 // D0
+#define LCD_D1  1 // D1
+#define LCD_D2  A4 // A4
+#define LCD_D3  A5 // A5
+#endif
+
 #if defined(RRD)
+#if defined(ATOM2)
+LiquidCrystalFast lcd(LCD_RS, LCD_EN, LCD_D0, LCD_D1, LCD_D2, LCD_D3, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
+#else
 LiquidCrystalFast lcd(LCD_RS, LCD_EN, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
+#endif
 #else
 LiquidCrystalFast lcd(LCD_RS, LCD_RW, LCD_EN, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
 #endif
 
 #define CLICK_PIN  A2 // A2 Encoder click pin
 #define BUZZER_PIN A3 // A3 Buzzer pin
+
+#ifndef ATOM2
 #define LED1       A4 // optional LED1
 #define LED2       A5 // optional LED2
+#endif
 
 #else
 #error "One of VIKI or PARALLEL needs to be defined"

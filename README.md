@@ -11,6 +11,7 @@ Prebuild bianries ready for upload to arduino are:-
 * viki_panel_adapter.hex for viki/panelolu2
 * parallel_panel_adapter.hex for parallel LCD
 * RRD_panel_adapter.hex for Reprap Discount Smart Controller
+* ATOM2_panel_adapter.hex for ATOM2.x Reprap Discount Smart Controller
 
 Default Wiring is as follows:-
 

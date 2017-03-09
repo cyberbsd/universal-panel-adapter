@@ -7,3 +7,4 @@
 #include "utility/twi.h"*/
 #include "Wire.h"
 #include "LiquidCrystalFast.h"
+//#include <LiquidCrystal.h>
