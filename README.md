@@ -45,6 +45,32 @@ Parallel LCD pin to Nano
 	ENCB  -> D3
 	Click -> A2
 
+Reprap Discount Smart Controller almost the same as Parallel LCD pin to Nano
+--------------------
+
+	 4 RS(EXP1.4) -> D9
+	 
+	 6 EN(EXP1.3) -> A1
+	11 D4(EXP1.5) -> D5
+	12 D5(EXP1.6) -> D6
+	13 D6(EXP1.7) -> D7
+	14 D7(EXP1.8) -> D8
+
+	 1(EXP1.9) gnd
+	 2(EXP1.10) +5v
+	 
+ 	Encoder is connected to Nano
+	ENCA(EXP2.5)  -> D2
+	ENCB(EXP2.3)  -> D3
+	Click(EXP1.2) -> A2
+	BUZZ(EXP1.1)  -> A3
+	
+	For ATOM2.x LCD
+	7  D0(LCD3.1) -> D0
+	8  D1(LCD3.2) -> D1
+	9  D2(LCD3.3) -> A4
+	10 D3(LCD3.4) -> A5
+
 Smoothie to Nano
 ----------------
 	MOSI -> D11 : 0.18
