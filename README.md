@@ -39,6 +39,11 @@ Parallel LCD pin to Nano
 	 2 +5v
 	 3 contrast
 	 15,16 backlight power (on some)
+	 
+ 	Encoder is connected to Nano
+	ENCA  -> D2
+	ENCB  -> D3
+	Click -> A2
 
 Smoothie to Nano
 ----------------
